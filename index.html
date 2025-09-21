@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Prostate Defense Tea</title>
+  <style>
+    :root { --radius: 12px; --gap: 14px; --shadow: 0 12px 30px rgba(0,0,0,.08); }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif; background: #f7f7f9; color: #111; }
+    .wrap { max-width: 920px; margin: 40px auto; display: grid; grid-template-columns: 1fr 380px; gap: 24px; }
+    @media (max-width: 980px) { .wrap { grid-template-columns: 1fr; } }
+    .card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .card h2 { margin: 0; padding: 20px 22px; font-size: 1.1rem; border-bottom: 1px solid #eee; }
+    form { display: grid; gap: var(--gap); padding: 22px; }
+    .row { display: grid; gap: var(--gap); grid-template-columns: 1fr 1fr; }
+    @media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+    label { font-size: .92rem; font-weight: 600; color: #333; display: block; margin-bottom: 6px; }
+    input, select, textarea { width: 100%; padding: 12px 14px; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; outline: none; transition: border .15s ease; background: #fff; }
+    input:focus, select:focus, textarea:focus { border-color: #6a5acd; }
+    .muted { color: #666; font-size: .92rem; }
+    .summary { padding: 22px; display: grid; gap: 10px; font-size: .95rem; }
+    .summary .line { display: flex; justify-content: space-between; align-items: center; }
+    .summary .total { font-weight: 800; font-size: 1.05rem; border-top: 1px dashed #eee; padding-top: 10px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 10px; border: none; border-radius: 999px; padding: 14px 18px; font-weight: 700; font-size: 1rem; background: #111; color: #fff; cursor: pointer; }
+    .btn:disabled { opacity: .6; cursor: not-allowed; }
+    .hint { font-size: .85rem; color: #777; margin-top: -8px; }
+    .footnote { text-align: center; color: #777; font-size: .86rem; margin-top: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h2>Shipping & Contact</h2>
+      <form id="orderForm" action="https://script.google.com/macros/s/AKfycbx2b9PVPH7CX489-nyrtQIQLsxGFUN9JVbFvbNUKIxb-Ujq9rWA3_h6zsQgFzDTR0pW2A/exec" method="POST">
+        <!-- Name -->
+        <div>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required placeholder="e.g., John M. Doe" />
+        </div>
+
+        <!-- Contact -->
+        <div class="row">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required
+                   placeholder="+254712345678 or 0712345678"
+                   pattern="^(\+2547\d{8}|07\d{8})$"
+                   title="Use +2547XXXXXXXX or 07XXXXXXXX (e.g., +254712345678)" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="whatsapp">WhatsApp Number</label>
+            <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required
+                   placeholder="+254712345678 or 0712345678"
+                   pattern="^(\+2547\d{8}|07\d{8})$"
+                   title="Use +2547XXXXXXXX or 07XXXXXXXX (e.g., +254712345678)" />
+          </div>
+          <div>
+            <label for="county">County / Region</label>
+            <select id="county" name="county" required>
+              <option value="" disabled selected>Select county…</option>
+              <option value="Baringo">Baringo</option>
+              <option value="Bomet">Bomet</option>
+              <option value="Bungoma">Bungoma</option>
+              <option value="Busia">Busia</option>
+              <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+              <option value="Embu">Embu</option>
+              <option value="Garissa">Garissa</option>
+              <option value="Homa Bay">Homa Bay</option>
+              <option value="Isiolo">Isiolo</option>
+              <option value="Kajiado">Kajiado</option>
+              <option value="Kakamega">Kakamega</option>
+              <option value="Kericho">Kericho</option>
+              <option value="Kiambu">Kiambu</option>
+              <option value="Kilifi">Kilifi</option>
+              <option value="Kirinyaga">Kirinyaga</option>
+              <option value="Kisii">Kisii</option>
+              <option value="Kisumu">Kisumu</option>
+              <option value="Kitui">Kitui</option>
+              <option value="Kwale">Kwale</option>
+              <option value="Laikipia">Laikipia</option>
+              <option value="Lamu">Lamu</option>
+              <option value="Machakos">Machakos</option>
+              <option value="Makueni">Makueni</option>
+              <option value="Mandera">Mandera</option>
+              <option value="Marsabit">Marsabit</option>
+              <option value="Meru">Meru</option>
+              <option value="Migori">Migori</option>
+              <option value="Mombasa">Mombasa</option>
+              <option value="Murang'a">Murang'a</option>
+              <option value="Nairobi">Nairobi</option>
+              <option value="Nakuru">Nakuru</option>
+              <option value="Nandi">Nandi</option>
+              <option value="Narok">Narok</option>
+              <option value="Nyamira">Nyamira</option>
+              <option value="Nyandarua">Nyandarua</option>
+              <option value="Nyeri">Nyeri</option>
+              <option value="Samburu">Samburu</option>
+              <option value="Siaya">Siaya</option>
+              <option value="Taita–Taveta">Taita–Taveta</option>
+              <option value="Tana River">Tana River</option>
+              <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+              <option value="Trans Nzoia">Trans Nzoia</option>
+              <option value="Turkana">Turkana</option>
+              <option value="Uasin Gishu">Uasin Gishu</option>
+              <option value="Vihiga">Vihiga</option>
+              <option value="Wajir">Wajir</option>
+              <option value="West Pokot">West Pokot</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label for="address">Delivery Address</label>
+          <textarea id="address" name="address" rows="3" required placeholder="Apartment / House, Street, Estate, Landmark"></textarea>
+          <div class="hint">We’ll call to confirm delivery time and directions.</div>
+        </div>
+
+        <!-- Product & Quantity -->
+        <div class="row">
+          <div>
+            <label for="product">Product</label>
+            <input id="product" name="product" type="text" value="Prostate Defense Tea" readonly />
+          </div>
+          <div>
+            <label for="quantity">Quantity (Bundle)</label>
+            <select id="quantity" name="quantity" required>
+              <option value="" disabled selected>Select bundle…</option>
+              <option value="1 Pack" data-price="3900">1 Pack — KSh 3,900</option>
+              <option value="2 Packs" data-price="6800">2 Packs — KSh 6,800</option>
+              <option value="3 Packs" data-price="8700">3 Packs — KSh 8,700</option>
+              <option value="4 Packs" data-price="9600">4 Packs — KSh 9,600</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Hidden fields -->
+        <input type="hidden" id="price" name="price" />
+        <input type="hidden" id="total" name="total" />
+
+        <!-- Order Summary -->
+        <div class="card" style="margin-top:10px;">
+          <h2>Order Summary</h2>
+          <div class="summary">
+            <div class="line"><span>Product</span><span id="sumProduct">Prostate Defense Tea</span></div>
+            <div class="line"><span>Quantity</span><span id="sumQty">—</span></div>
+            <div class="line"><span>Price</span><span id="sumPrice">—</span></div>
+            <div class="total line"><span>Total</span><span id="sumTotal">—</span></div>
+          </div>
+        </div>
+
+        <!-- Submit (type=submit for non-JS fallback) -->
+        <button class="btn" type="submit" id="submitBtn" disabled>Submit Order</button>
+        <div class="footnote">Secure checkout • We’ll never share your info</div>
+        <noscript>
+          <p class="muted">Note: WhatsApp auto-open requires JavaScript. Without it, your order will still be submitted and you'll be redirected.</p>
+        </noscript>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Why Shop With Us</h2>
+      <div class="summary">
+        <div>✔️ Fast delivery across Kenya</div>
+        <div>✔️ Pay on delivery (selected areas)</div>
+        <div>✔️ 100% genuine products</div>
+        <div class="muted">Questions? Call/WhatsApp: +254 7XX XXX XXX</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    const btn = document.getElementById('submitBtn');
+    const qtyEl = document.getElementById('quantity');
+    const priceEl = document.getElementById('price');
+    const totalEl = document.getElementById('total');
+    const sumQty = document.getElementById('sumQty');
+    const sumPrice = document.getElementById('sumPrice');
+    const sumTotal = document.getElementById('sumTotal');
+
+    function ksh(n) { return 'KSh ' + Number(n || 0).toLocaleString('en-KE'); }
+
+    function refreshButton() {
+      const opt = qtyEl.options[qtyEl.selectedIndex];
+      const hasBundle = !!(opt && parseInt(opt.dataset.price || '0', 10));
+      btn.disabled = !(form.checkValidity() && hasBundle);
+    }
+
+    function updateSummary() {
+      const opt = qtyEl.options[qtyEl.selectedIndex];
+      const label = opt ? opt.value : '';
+      const price = opt ? parseInt(opt.dataset.price || '0', 10) : 0;
+      sumQty.textContent = label || '—';
+      sumPrice.textContent = price ? ksh(price) : '—';
+      sumTotal.textContent = price ? ksh(price) : '—';
+      priceEl.value = price || '';
+      totalEl.value = price || '';
+      refreshButton();
+    }
+
+    form.addEventListener('input', refreshButton);
+    qtyEl.addEventListener('change', updateSummary);
+    updateSummary();
+
+    function normalizeKenyan(msisdn) {
+      if (!msisdn) return msisdn;
+      const s = msisdn.replace(/\s+/g, '');
+      if (/^07\d{8}$/.test(s)) return '+254' + s.slice(1);
+      return s;
+    }
+
+    // Popup-safe: intercept submit and turn into WA + background POST
+    form.addEventListener('submit', function (e) {
+      // Let non-JS/browser fall back submit when script is disabled; otherwise intercept
+      e.preventDefault();
+      if (btn.disabled || !form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const phone = document.getElementById('phone');
+      const whatsapp = document.getElementById('whatsapp');
+      phone.value = normalizeKenyan(phone.value);
+      whatsapp.value = normalizeKenyan(whatsapp.value);
+
+      const data = new FormData(form);
+      const msg = [
+        'Hi, I just placed an order on the site.',
+        'Product: ' + data.get('product'),
+        'Quantity: ' + data.get('quantity'),
+        'Full Name: ' + data.get('name'),
+        'Phone: ' + data.get('phone'),
+        'WhatsApp: ' + data.get('whatsapp'),
+        'County: ' + data.get('county'),
+        'Address: ' + data.get('address')
+      ].join('\n');
+
+      const waUrl = 'https://wa.me/2349114538331?text=' + encodeURIComponent(msg);
+      const thankYou = 'https://www.ke-ruzmart.store/postrate-defense-tea-thank-you-ke/';
+
+      // 1) Open WA via user gesture equivalent (submit click)
+      const waTab = window.open(waUrl, '_blank');
+
+      // 2) Background POST
+      fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' }).catch(() => {});
+
+      // 3) Redirect
+      setTimeout(() => { window.location.href = thankYou; }, 300);
+
+      if (!waTab) {
+        window.location.href = waUrl;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Processing…';
+    });
+  </script>
+</body>
+</html>
